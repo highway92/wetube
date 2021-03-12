@@ -2,10 +2,10 @@ extends layouts/main
 
 
 block content
-    .form__container 
-        form(action="/login", method="post")
-            input(type="text", name="name", placeholder="Full name")
+    .form-container 
+        form(action=routes.login, method="post")
             input(type="email", name="email", placeholder="Email")
             input(type="password", name="password", placeholder="Password")
-            input(type="password", name="password2", placeholder="Verify Password")
             input(type="submit", value="Log in")
+        include partials/socialLogin
+
